@@ -11,15 +11,17 @@ export default function SettingsPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Settings</h2>
-      <div className="space-y-3 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card max-w-xl">
+      <div className="space-y-3 card p-5 max-w-xl">
         {Object.keys(settings).map((k) => (
           <div key={k}>
             <label className="block text-sm font-medium mb-1.5">{k}</label>
-            <input value={settings[k] || ""} onChange={(e) => setSettings({ ...settings, [k]: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+            <input value={settings[k] || ""} onChange={(e) => setSettings({ ...settings, [k]: e.target.value })} className="w-full input" />
           </div>
         ))}
-        <button onClick={save} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save</button>
+        <button onClick={save} className="btn btn-primary">Save</button>
       </div>
     </div>
   );
 }
+
+

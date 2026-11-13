@@ -8,7 +8,7 @@ export default function ActivityLogPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Activity Log</h2>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Action</th><th className="text-left px-4 py-2">Target</th><th className="text-left px-4 py-2">Description</th><th className="text-left px-4 py-2">When</th></tr></thead>
           <tbody>
@@ -27,3 +27,4 @@ export default function ActivityLogPage() {
     </div>
   );
 }
+

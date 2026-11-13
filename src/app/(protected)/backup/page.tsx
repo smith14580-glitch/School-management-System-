@@ -12,10 +12,11 @@ export default function BackupPage() {
     <div>
       <h2 className="text-xl font-semibold mb-4">Backup & Export</h2>
       <div className="space-y-2">
-        <button onClick={() => dl("/api/backup/export/students", "students.json")} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Export Students</button>
-        <button onClick={() => dl("/api/backup/export/fees", "fees.json")} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm ml-2">Export Fees</button>
-        <button onClick={() => dl("/api/backup/export/results", "results.json")} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm ml-2">Export Results</button>
+        <button onClick={() => dl("/api/backup/export/students", "students.json")} className="btn btn-primary">Export Students</button>
+        <button onClick={() => dl("/api/backup/export/fees", "fees.json")} className="btn btn-primary ml-2">Export Fees</button>
+        <button onClick={() => dl("/api/backup/export/results", "results.json")} className="btn btn-primary ml-2">Export Results</button>
       </div>
     </div>
   );
 }
+

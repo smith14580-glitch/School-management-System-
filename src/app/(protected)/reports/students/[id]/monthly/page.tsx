@@ -12,7 +12,7 @@ export default function MonthlyReportPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Monthly Report - {data.student?.name}</h2>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
+      <div className="card p-5">
         <h3 className="font-semibold mb-2">Attendance (last 30 days)</h3>
         <ul className="text-sm">
           {(data.attendance || []).map((a: any, i: number) => <li key={i}>{a.date}: {a.status}</li>)}
@@ -21,3 +21,4 @@ export default function MonthlyReportPage() {
     </div>
   );
 }
+

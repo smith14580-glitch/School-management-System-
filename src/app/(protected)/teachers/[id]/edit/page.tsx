@@ -24,17 +24,19 @@ export default function EditTeacherPage() {
   return (
     <div className="max-w-2xl">
       <h2 className="text-xl font-semibold mb-4">Edit Teacher</h2>
-      <form onSubmit={submit} className="grid gap-3 sm:grid-cols-2 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
-        <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="Contact" />
-        <input value={form.whatsapp_number} onChange={(e) => setForm({ ...form, whatsapp_number: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="WhatsApp" />
-        <input value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="Email" />
-        <input value={form.cnic} onChange={(e) => setForm({ ...form, cnic: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="CNIC" />
-        <input value={form.qualification} onChange={(e) => setForm({ ...form, qualification: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="Qualification" />
-        <input type="date" value={form.joining_date} onChange={(e) => setForm({ ...form, joining_date: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input type="number" value={form.basic_salary} onChange={(e) => setForm({ ...form, basic_salary: Number(e.target.value) })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <button className="sm:col-span-2 rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save</button>
+      <form onSubmit={submit} className="grid gap-3 sm:grid-cols-2 card p-5">
+        <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="input" />
+        <input value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value })} className="input" placeholder="Contact" />
+        <input value={form.whatsapp_number} onChange={(e) => setForm({ ...form, whatsapp_number: e.target.value })} className="input" placeholder="WhatsApp" />
+        <input value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="input" placeholder="Email" />
+        <input value={form.cnic} onChange={(e) => setForm({ ...form, cnic: e.target.value })} className="input" placeholder="CNIC" />
+        <input value={form.qualification} onChange={(e) => setForm({ ...form, qualification: e.target.value })} className="input" placeholder="Qualification" />
+        <input type="date" value={form.joining_date} onChange={(e) => setForm({ ...form, joining_date: e.target.value })} className="input" />
+        <input type="number" value={form.basic_salary} onChange={(e) => setForm({ ...form, basic_salary: Number(e.target.value) })} className="input" />
+        <button className="sm:col-span-2 btn btn-primary">Save</button>
       </form>
     </div>
   );
 }
+
+

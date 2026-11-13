@@ -36,7 +36,7 @@ export default function TestShowPage() {
     <div>
       <h2 className="text-xl font-semibold mb-2">{test.title}</h2>
       <p className="text-sm text-brand-500 mb-4">Total marks: {test.total_marks}</p>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2">Marks</th><th className="px-4 py-2">Remarks</th></tr></thead>
           <tbody>
@@ -54,8 +54,10 @@ export default function TestShowPage() {
             ))}
           </tbody>
         </table>
-        {students.length > 0 && <div className="p-4"><button onClick={save} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save Marks</button></div>}
+        {students.length > 0 && <div className="p-4"><button onClick={save} className="btn btn-primary">Save Marks</button></div>}
       </div>
     </div>
   );
 }
+
+

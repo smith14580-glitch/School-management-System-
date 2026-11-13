@@ -19,7 +19,7 @@ export default function StudentShowPage() {
           <Link href={`/students/${id}/id-card`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">ID Card</Link>
         </div>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card grid sm:grid-cols-2 gap-3 text-sm">
+      <div className="card p-5 grid sm:grid-cols-2 gap-3 text-sm">
         <div><span className="text-brand-500">Student Code:</span> {student.student_code}</div>
         <div><span className="text-brand-500">Roll:</span> {student.roll_number ?? "-"}</div>
         <div><span className="text-brand-500">Guardian:</span> {student.father_guardian_name}</div>
@@ -40,3 +40,4 @@ export default function StudentShowPage() {
     </div>
   );
 }
+

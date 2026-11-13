@@ -13,13 +13,13 @@ export default function SessionsPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Academic Sessions</h2>
-      <div className="mb-4 space-y-2 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
-        <input placeholder="Year label (e.g. 2026-2027)" value={form.year_label} onChange={(e) => setForm({ ...form, year_label: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input type="date" value={form.start_date} onChange={(e) => setForm({ ...form, start_date: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input type="date" value={form.end_date} onChange={(e) => setForm({ ...form, end_date: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <button onClick={add} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Add</button>
+      <div className="mb-4 space-y-2 card p-5">
+        <input placeholder="Year label (e.g. 2026-2027)" value={form.year_label} onChange={(e) => setForm({ ...form, year_label: e.target.value })} className="w-full input" />
+        <input type="date" value={form.start_date} onChange={(e) => setForm({ ...form, start_date: e.target.value })} className="input" />
+        <input type="date" value={form.end_date} onChange={(e) => setForm({ ...form, end_date: e.target.value })} className="input" />
+        <button onClick={add} className="btn btn-primary">Add</button>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Label</th><th className="text-left px-4 py-2">Dates</th><th className="text-left px-4 py-2">Current</th><th className="text-left px-4 py-2">Locked</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -41,3 +41,5 @@ export default function SessionsPage() {
     </div>
   );
 }
+
+

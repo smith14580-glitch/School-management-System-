@@ -16,7 +16,7 @@ export default function TeacherShowPage() {
         <h2 className="text-xl font-semibold">{t.name}</h2>
         <Link href={`/teachers/${id}/edit`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Edit</Link>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card grid sm:grid-cols-2 gap-3 text-sm">
+      <div className="card p-5 grid sm:grid-cols-2 gap-3 text-sm">
         <div><span className="text-brand-500">Code:</span> {t.employee_code}</div>
         <div><span className="text-brand-500">Contact:</span> {t.contact || "-"}</div>
         <div><span className="text-brand-500">WhatsApp:</span> {t.whatsapp_number || "-"}</div>
@@ -33,3 +33,4 @@ export default function TeacherShowPage() {
     </div>
   );
 }
+

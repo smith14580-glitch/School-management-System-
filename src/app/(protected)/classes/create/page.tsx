@@ -22,36 +22,38 @@ export default function CreateClassPage() {
     <div className="max-w-xl">
       <h2 className="text-xl font-semibold mb-4">Create Class</h2>
       {error && <div className="mb-4 text-sm text-rose-600">{error}</div>}
-      <form onSubmit={submit} className="space-y-4 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
+      <form onSubmit={submit} className="space-y-4 card p-5">
         <div>
           <label className="block text-sm font-medium mb-1.5">Academic Session</label>
-          <select value={form.academic_session_id} onChange={(e) => setForm({ ...form, academic_session_id: e.target.value })} required className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm">
+          <select value={form.academic_session_id} onChange={(e) => setForm({ ...form, academic_session_id: e.target.value })} required className="w-full input">
             <option value="">Select</option>
             {sessions.map((s) => <option key={s.id} value={s.id}>{s.year_label}</option>)}
           </select>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Class Name</label>
-          <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+          <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required className="w-full input" />
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Section</label>
-          <input value={form.section} onChange={(e) => setForm({ ...form, section: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+          <input value={form.section} onChange={(e) => setForm({ ...form, section: e.target.value })} className="w-full input" />
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Class Order</label>
-          <input type="number" value={form.class_order} onChange={(e) => setForm({ ...form, class_order: Number(e.target.value) })} className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+          <input type="number" value={form.class_order} onChange={(e) => setForm({ ...form, class_order: Number(e.target.value) })} className="w-full input" />
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Capacity</label>
-          <input type="number" value={form.capacity} onChange={(e) => setForm({ ...form, capacity: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+          <input type="number" value={form.capacity} onChange={(e) => setForm({ ...form, capacity: e.target.value })} className="w-full input" />
         </div>
         <div className="flex items-center gap-2">
           <input type="checkbox" checked={form.is_final_year} onChange={(e) => setForm({ ...form, is_final_year: e.target.checked })} />
           <label className="text-sm">Final year (graduation)</label>
         </div>
-        <button className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Create</button>
+        <button className="btn btn-primary">Create</button>
       </form>
     </div>
   );
 }
+
+

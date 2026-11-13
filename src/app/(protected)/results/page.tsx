@@ -9,7 +9,7 @@ export default function ResultsIndexPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Results</h2>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Exam</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -27,3 +27,4 @@ export default function ResultsIndexPage() {
     </div>
   );
 }
+

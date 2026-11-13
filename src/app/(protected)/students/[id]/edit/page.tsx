@@ -25,18 +25,20 @@ export default function EditStudentPage() {
   return (
     <div className="max-w-2xl">
       <h2 className="text-xl font-semibold mb-4">Edit Student</h2>
-      <form onSubmit={submit} className="grid gap-3 sm:grid-cols-2 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
-        <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input value={form.father_guardian_name} onChange={(e) => setForm({ ...form, father_guardian_name: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input type="date" value={form.dob} onChange={(e) => setForm({ ...form, dob: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <select value={form.gender} onChange={(e) => setForm({ ...form, gender: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+      <form onSubmit={submit} className="grid gap-3 sm:grid-cols-2 card p-5">
+        <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="input" />
+        <input value={form.father_guardian_name} onChange={(e) => setForm({ ...form, father_guardian_name: e.target.value })} className="input" />
+        <input type="date" value={form.dob} onChange={(e) => setForm({ ...form, dob: e.target.value })} className="input" />
+        <select value={form.gender} onChange={(e) => setForm({ ...form, gender: e.target.value })} className="input">
           <option value="">Gender</option><option value="male">Male</option><option value="female">Female</option><option value="other">Other</option>
         </select>
-        <input value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="Contact" />
-        <input value={form.whatsapp_number} onChange={(e) => setForm({ ...form, whatsapp_number: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" placeholder="WhatsApp" />
-        <input value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white sm:col-span-2" placeholder="Address" />
-        <button className="sm:col-span-2 rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save</button>
+        <input value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value })} className="input" placeholder="Contact" />
+        <input value={form.whatsapp_number} onChange={(e) => setForm({ ...form, whatsapp_number: e.target.value })} className="input" placeholder="WhatsApp" />
+        <input value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} className="input sm:col-span-2" placeholder="Address" />
+        <button className="sm:col-span-2 btn btn-primary">Save</button>
       </form>
     </div>
   );
 }
+
+

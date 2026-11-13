@@ -47,7 +47,7 @@ export default function ResultEntryPage() {
     <div>
       <h2 className="text-xl font-semibold mb-2">Result Entry</h2>
       <p className="text-sm text-brand-500 mb-4">{data.exam.name}</p>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card mb-4">
+      <div className="card p-5 mb-4">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Subject</th><th className="text-left px-4 py-2">Total</th><th className="px-4 py-2">Marks</th><th className="px-4 py-2">Absent</th></tr></thead>
           <tbody>
@@ -67,7 +67,7 @@ export default function ResultEntryPage() {
         </table>
         <div className="mt-3">
           <label className="block text-sm font-medium mb-1.5">Remarks</label>
-          <textarea value={remarks} onChange={(e) => setRemarks(e.target.value)} className="w-full rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
+          <textarea value={remarks} onChange={(e) => setRemarks(e.target.value)} className="w-full input" />
         </div>
         {data.summary && (
           <div className="mt-3 text-sm">
@@ -76,10 +76,12 @@ export default function ResultEntryPage() {
           </div>
         )}
         <div className="mt-4 flex gap-2">
-          <button onClick={() => save(false)} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save</button>
+          <button onClick={() => save(false)} className="btn btn-primary">Save</button>
           <button onClick={() => save(true)} className="rounded-lg border border-cream-400 px-4 py-2 text-sm">Finalize</button>
         </div>
       </div>
     </div>
   );
 }
+
+

@@ -14,10 +14,10 @@ export default function LookupPage() {
     <div>
       <h2 className="text-xl font-semibold mb-4">Student Record Search</h2>
       <div className="mb-4 flex gap-2">
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Name or code" className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <button onClick={search} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">Search</button>
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Name or code" className="input" />
+        <button onClick={search} className="btn btn-primary">Search</button>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Code</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -35,3 +35,5 @@ export default function LookupPage() {
     </div>
   );
 }
+
+

@@ -18,7 +18,7 @@ export default function TimetablePage() {
     <div>
       <h2 className="text-xl font-semibold mb-4">Timetable</h2>
       <div className="mb-4">
-        <select value={classId} onChange={(e) => setClassId(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+        <select value={classId} onChange={(e) => setClassId(e.target.value)} className="input">
           <option value="">Select class</option>
           {classes.map((c) => <option key={c.id} value={c.id}>{c.name} {c.section}</option>)}
         </select>
@@ -26,15 +26,15 @@ export default function TimetablePage() {
       {classId && (
         <>
           <div className="mb-4 flex flex-wrap gap-2">
-            <select value={form.day_of_week} onChange={(e) => setForm({ ...form, day_of_week: Number(e.target.value) })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+            <select value={form.day_of_week} onChange={(e) => setForm({ ...form, day_of_week: Number(e.target.value) })} className="input">
               {["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map((d, i) => <option key={i} value={i+1}>{d}</option>)}
             </select>
-            <input value={form.start_time} onChange={(e) => setForm({ ...form, start_time: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white w-24" />
-            <input value={form.end_time} onChange={(e) => setForm({ ...form, end_time: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white w-24" />
-            <input value={form.room} onChange={(e) => setForm({ ...form, room: e.target.value })} placeholder="Room" className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white w-24" />
-            <button onClick={add} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">Add Slot</button>
+            <input value={form.start_time} onChange={(e) => setForm({ ...form, start_time: e.target.value })} className="input w-24" />
+            <input value={form.end_time} onChange={(e) => setForm({ ...form, end_time: e.target.value })} className="input w-24" />
+            <input value={form.room} onChange={(e) => setForm({ ...form, room: e.target.value })} placeholder="Room" className="input w-24" />
+            <button onClick={add} className="btn btn-primary">Add Slot</button>
           </div>
-          <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+          <div className="table-wrap">
             <table className="w-full text-sm">
               <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Day</th><th className="text-left px-4 py-2">Time</th><th className="text-left px-4 py-2">Room</th><th className="px-4 py-2"></th></tr></thead>
               <tbody>
@@ -55,3 +55,5 @@ export default function TimetablePage() {
     </div>
   );
 }
+
+

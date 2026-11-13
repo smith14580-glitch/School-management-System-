@@ -13,15 +13,15 @@ export default function TestsPage() {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">Daily Tests</h2>
-        <Link href="/tests/create" className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">+ New Test</Link>
+        <Link href="/tests/create" className="btn btn-primary">+ New Test</Link>
       </div>
       <div className="mb-4">
-        <select value={classId} onChange={(e) => setClassId(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+        <select value={classId} onChange={(e) => setClassId(e.target.value)} className="input">
           <option value="">All classes</option>
           {classes.map((c) => <option key={c.id} value={c.id}>{c.name} {c.section}</option>)}
         </select>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Date</th><th className="text-left px-4 py-2">Total</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -40,3 +40,5 @@ export default function TestsPage() {
     </div>
   );
 }
+
+

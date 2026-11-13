@@ -32,11 +32,11 @@ export default function StudentFeesPage() {
     <div>
       <h2 className="text-xl font-semibold mb-2">Fees - {data.student?.name}</h2>
       <div className="mb-4">
-        <select value={sessionId} onChange={(e) => setSessionId(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+        <select value={sessionId} onChange={(e) => setSessionId(e.target.value)} className="input">
           {sessions.map((s) => <option key={s.id} value={s.id}>{s.year_label}</option>)}
         </select>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Month</th><th className="text-left px-4 py-2">Fee Type</th><th className="text-left px-4 py-2">Due</th><th className="text-left px-4 py-2">Paid</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -58,3 +58,4 @@ export default function StudentFeesPage() {
     </div>
   );
 }
+

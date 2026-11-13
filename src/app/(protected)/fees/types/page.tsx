@@ -18,11 +18,11 @@ export default function FeeTypesPage() {
     <div>
       <h2 className="text-xl font-semibold mb-4">Fee Types</h2>
       <div className="mb-4 flex gap-2">
-        <input placeholder="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <input type="number" placeholder="Amount" value={form.default_amount} onChange={(e) => setForm({ ...form, default_amount: Number(e.target.value) })} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white w-28" />
-        <button onClick={add} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">Add</button>
+        <input placeholder="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="input" />
+        <input type="number" placeholder="Amount" value={form.default_amount} onChange={(e) => setForm({ ...form, default_amount: Number(e.target.value) })} className="input w-28" />
+        <button onClick={add} className="btn btn-primary">Add</button>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Amount</th><th className="text-left px-4 py-2">Recurring</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -43,3 +43,5 @@ export default function FeeTypesPage() {
     </div>
   );
 }
+
+

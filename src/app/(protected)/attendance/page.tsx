@@ -36,14 +36,14 @@ export default function AttendancePage() {
     <div>
       <h2 className="text-xl font-semibold mb-4">Attendance</h2>
       <div className="mb-4 flex gap-2">
-        <select value={classId} onChange={(e) => setClassId(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+        <select value={classId} onChange={(e) => setClassId(e.target.value)} className="input">
           <option value="">Select class</option>
           {classes.map((c) => <option key={c.id} value={c.id}>{c.name} {c.section}</option>)}
         </select>
-        <input type="date" value={dateStr} onChange={(e) => setDateStr(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
+        <input type="date" value={dateStr} onChange={(e) => setDateStr(e.target.value)} className="input" />
       </div>
       {loading ? <p>Loading...</p> : (
-        <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+        <div className="table-wrap">
           <table className="w-full text-sm">
             <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2">Status</th></tr></thead>
             <tbody>
@@ -63,9 +63,11 @@ export default function AttendancePage() {
               ))}
             </tbody>
           </table>
-          {students.length > 0 && <div className="p-4"><button onClick={save} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save Attendance</button></div>}
+          {students.length > 0 && <div className="p-4"><button onClick={save} className="btn btn-primary">Save Attendance</button></div>}
         </div>
       )}
     </div>
   );
 }
+
+

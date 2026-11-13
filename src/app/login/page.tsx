@@ -34,12 +34,12 @@ export default function LoginPage() {
           <div>
             <label className="block text-sm font-medium mb-1.5">Username</label>
             <input value={username} onChange={(e) => setUsername(e.target.value)} required
-              className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+              className="w-full input" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1.5">Password</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required
-              className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
+              className="w-full input" />
           </div>
           <button disabled={loading} className="w-full rounded-lg bg-brand-700 hover:bg-brand-800 text-cream-50 font-medium px-4 py-2.5 text-sm">
             {loading ? "Signing in..." : "Sign in"}
@@ -49,3 +49,4 @@ export default function LoginPage() {
     </div>
   );
 }
+

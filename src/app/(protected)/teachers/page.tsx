@@ -18,14 +18,14 @@ export default function TeachersPage() {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">Teachers</h2>
-        <Link href="/teachers/create" className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">+ New Teacher</Link>
+        <Link href="/teachers/create" className="btn btn-primary">+ New Teacher</Link>
       </div>
       <div className="mb-4 flex gap-2">
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search..." className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search..." className="input" />
         <button onClick={load} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Search</button>
       </div>
       {loading ? <p>Loading...</p> : (
-        <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+        <div className="table-wrap">
           <table className="w-full text-sm">
             <thead className="bg-cream-200"><tr>
               <th className="text-left px-4 py-2">Code</th><th className="text-left px-4 py-2">Name</th>
@@ -49,3 +49,5 @@ export default function TeachersPage() {
     </div>
   );
 }
+
+

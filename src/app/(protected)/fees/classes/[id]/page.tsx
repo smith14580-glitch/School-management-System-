@@ -48,12 +48,12 @@ export default function ClassFeesPage() {
     <div>
       <h2 className="text-xl font-semibold mb-4">Class Fees</h2>
       <div className="mb-4">
-        <select value={sessionId} onChange={(e) => setSessionId(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+        <select value={sessionId} onChange={(e) => setSessionId(e.target.value)} className="input">
           {sessions.map((s) => <option key={s.id} value={s.id}>{s.year_label}</option>)}
         </select>
       </div>
 
-      <section className="mb-6 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
+      <section className="mb-6 card p-5">
         <h3 className="font-semibold mb-3">Fee Configuration</h3>
         <table className="w-full text-sm mb-3">
           <thead className="bg-cream-200"><tr><th className="text-left px-3 py-2">Fee Type</th><th className="text-left px-3 py-2">Amount</th></tr></thead>
@@ -69,10 +69,10 @@ export default function ClassFeesPage() {
             })}
           </tbody>
         </table>
-        <button onClick={saveConfig} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Save Config</button>
+        <button onClick={saveConfig} className="btn btn-primary">Save Config</button>
       </section>
 
-      <section className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <section className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -92,3 +92,5 @@ export default function ClassFeesPage() {
     </div>
   );
 }
+
+

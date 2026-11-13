@@ -13,12 +13,12 @@ export default function NoticesPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Notices</h2>
-      <div className="mb-4 space-y-2 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
-        <input placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <textarea placeholder="Body" value={form.body} onChange={(e) => setForm({ ...form, body: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-        <button onClick={add} className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Post</button>
+      <div className="mb-4 space-y-2 card p-5">
+        <input placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} className="w-full input" />
+        <textarea placeholder="Body" value={form.body} onChange={(e) => setForm({ ...form, body: e.target.value })} className="w-full input" />
+        <button onClick={add} className="btn btn-primary">Post</button>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Audience</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -38,3 +38,5 @@ export default function NoticesPage() {
     </div>
   );
 }
+
+

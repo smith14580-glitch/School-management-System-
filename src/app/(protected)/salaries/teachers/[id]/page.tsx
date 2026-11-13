@@ -36,9 +36,9 @@ export default function TeacherSalaryPage() {
         <input type="number" value={basic} onChange={(e) => setBasic(Number(e.target.value))} className="w-28 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Basic" />
         <input type="number" value={allow} onChange={(e) => setAllow(Number(e.target.value))} className="w-24 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Allow" />
         <input type="number" value={ded} onChange={(e) => setDed(Number(e.target.value))} className="w-24 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Ded" />
-        <button onClick={generate} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">Generate</button>
+        <button onClick={generate} className="btn btn-primary">Generate</button>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden">
+      <div className="table-wrap">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Period</th><th className="text-left px-4 py-2">Net</th><th className="text-left px-4 py-2">Paid</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -60,3 +60,5 @@ export default function TeacherSalaryPage() {
     </div>
   );
 }
+
+

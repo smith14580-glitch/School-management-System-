@@ -44,16 +44,16 @@ export default function ClassShowPage() {
         <h2 className="text-xl font-semibold">{data.class.name} {data.class.section ? `/ ${data.class.section}` : ""}</h2>
         <div className="flex gap-2">
           <Link href={`/classes/${id}/edit`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Edit</Link>
-          <Link href={`/classes/${id}/students/add`} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">+ Add Student</Link>
+          <Link href={`/classes/${id}/students/add`} className="btn btn-primary">+ Add Student</Link>
         </div>
       </div>
 
-      <section className="mb-6 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
+      <section className="mb-6 card p-5">
         <h3 className="font-semibold mb-3">Subjects</h3>
         <div className="flex gap-2 mb-3">
-          <input value={subjectName} onChange={(e) => setSubjectName(e.target.value)} placeholder="Subject name" className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white" />
-          <input value={newSubjectCode} onChange={(e) => setNewSubjectCode(e.target.value)} placeholder="Code" className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white w-24" />
-          <button onClick={addSubject} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">Add</button>
+          <input value={subjectName} onChange={(e) => setSubjectName(e.target.value)} placeholder="Subject name" className="input" />
+          <input value={newSubjectCode} onChange={(e) => setNewSubjectCode(e.target.value)} placeholder="Code" className="input w-24" />
+          <button onClick={addSubject} className="btn btn-primary">Add</button>
         </div>
         <ul className="divide-y divide-cream-200">
           {data.subjects.map((s: any) => (
@@ -69,7 +69,7 @@ export default function ClassShowPage() {
         </ul>
       </section>
 
-      <section className="rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
+      <section className="card p-5">
         <h3 className="font-semibold mb-3">Students ({students.length})</h3>
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr>
@@ -104,3 +104,5 @@ export default function ClassShowPage() {
     </div>
   );
 }
+
+

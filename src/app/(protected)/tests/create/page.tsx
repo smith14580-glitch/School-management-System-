@@ -25,20 +25,22 @@ export default function CreateTestPage() {
     <div className="max-w-xl">
       <h2 className="text-xl font-semibold mb-4">Create Daily Test</h2>
       {error && <div className="mb-4 text-sm text-rose-600">{error}</div>}
-      <form onSubmit={submit} className="space-y-4 rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card">
-        <select value={form.class_id} onChange={(e) => setForm({ ...form, class_id: e.target.value, subject_id: "" })} required className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm">
+      <form onSubmit={submit} className="space-y-4 card p-5">
+        <select value={form.class_id} onChange={(e) => setForm({ ...form, class_id: e.target.value, subject_id: "" })} required className="w-full input">
           <option value="">Class</option>
           {classes.map((c) => <option key={c.id} value={c.id}>{c.name} {c.section}</option>)}
         </select>
-        <select value={form.subject_id} onChange={(e) => setForm({ ...form, subject_id: e.target.value })} required className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm">
+        <select value={form.subject_id} onChange={(e) => setForm({ ...form, subject_id: e.target.value })} required className="w-full input">
           <option value="">Subject</option>
           {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
         </select>
-        <input placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} required className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
-        <input type="date" value={form.test_date} onChange={(e) => setForm({ ...form, test_date: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
-        <input type="number" placeholder="Total marks" value={form.total_marks} onChange={(e) => setForm({ ...form, total_marks: e.target.value })} className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm" />
-        <button className="rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Create</button>
+        <input placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} required className="w-full input" />
+        <input type="date" value={form.test_date} onChange={(e) => setForm({ ...form, test_date: e.target.value })} className="w-full input" />
+        <input type="number" placeholder="Total marks" value={form.total_marks} onChange={(e) => setForm({ ...form, total_marks: e.target.value })} className="w-full input" />
+        <button className="btn btn-primary">Create</button>
       </form>
     </div>
   );
 }
+
+

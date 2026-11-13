@@ -12,7 +12,7 @@ export default function IdCardPage() {
   const s = data.student;
   return (
     <div className="max-w-sm mx-auto">
-      <div className="rounded-xl bg-cream-50 border border-cream-300 p-5 shadow-card text-center">
+      <div className="card p-5 text-center">
         <h3 className="font-bold text-brand-800">{data.school_name}</h3>
         <p className="text-xs text-brand-500 mb-3">Student ID Card</p>
         <div className="w-24 h-24 mx-auto rounded-full bg-cream-200 grid place-items-center text-brand-600 mb-3">Photo</div>
@@ -22,7 +22,9 @@ export default function IdCardPage() {
         <p className="text-sm text-brand-600">Class: {data.class?.name} {data.class?.section}</p>
         <p className="text-sm text-brand-600">Session: {data.session}</p>
       </div>
-      <button onClick={() => window.print()} className="mt-4 w-full rounded-lg bg-brand-700 text-cream-50 px-4 py-2 text-sm">Print</button>
+      <button onClick={() => window.print()} className="mt-4 w-full btn btn-primary">Print</button>
     </div>
   );
 }
+
+

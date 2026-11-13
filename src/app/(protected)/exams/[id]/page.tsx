@@ -47,15 +47,15 @@ export default function ExamShowPage() {
         </div>
       </div>
       <div className="mb-4 flex gap-2">
-        <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className="rounded-lg border border-cream-400 px-3 py-2 text-sm bg-white">
+        <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className="input">
           <option value="">Add subject</option>
           {classSubjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
         </select>
         <input type="number" value={totalMarks} onChange={(e) => setTotalMarks(Number(e.target.value))} className="w-24 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Total" />
         <input type="number" value={passingMarks} onChange={(e) => setPassingMarks(Number(e.target.value))} className="w-24 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Pass" />
-        <button onClick={addSubject} className="rounded-lg bg-brand-700 text-cream-50 px-3 py-2 text-sm">Add</button>
+        <button onClick={addSubject} className="btn btn-primary">Add</button>
       </div>
-      <div className="rounded-xl bg-cream-50 border border-cream-300 shadow-card overflow-hidden mb-4">
+      <div className="table-wrap mb-4">
         <table className="w-full text-sm">
           <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Subject</th><th className="text-left px-4 py-2">Total</th><th className="text-left px-4 py-2">Pass</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
@@ -77,3 +77,5 @@ export default function ExamShowPage() {
     </div>
   );
 }
+
+
