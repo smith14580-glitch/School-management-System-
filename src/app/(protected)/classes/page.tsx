@@ -22,7 +22,7 @@ export default function ClassesPage() {
       </div>
       <div className="mb-4 flex gap-2">
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search..." className="input" />
-        <button onClick={load} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Search</button>
+        <button onClick={load} className="btn btn-secondary">Search</button>
       </div>
       {loading ? <p>Loading...</p> : (
         <div className="table-wrap">
@@ -49,5 +49,6 @@ export default function ClassesPage() {
     </div>
   );
 }
+
 
 

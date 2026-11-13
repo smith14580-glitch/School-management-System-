@@ -43,7 +43,7 @@ export default function ClassShowPage() {
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">{data.class.name} {data.class.section ? `/ ${data.class.section}` : ""}</h2>
         <div className="flex gap-2">
-          <Link href={`/classes/${id}/edit`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Edit</Link>
+          <Link href={`/classes/${id}/edit`} className="btn btn-secondary">Edit</Link>
           <Link href={`/classes/${id}/students/add`} className="btn btn-primary">+ Add Student</Link>
         </div>
       </div>
@@ -104,5 +104,6 @@ export default function ClassShowPage() {
     </div>
   );
 }
+
 
 

@@ -10,11 +10,11 @@ export default function FeesIndexPage() {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">Fees</h2>
-        <Link href="/fees/types" className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Fee Types</Link>
+        <Link href="/fees/types" className="btn btn-secondary">Fee Types</Link>
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {classes.map((c) => (
-          <Link key={c.id} href={`/fees/classes/${c.id}`} className="rounded-xl bg-cream-50 border border-cream-300 p-4 shadow-card hover:border-brand-300">
+          <Link key={c.id} href={`/fees/classes/${c.id}`} className="card p-4 shadow-card hover:border-brand-300">
             <p className="font-semibold">{c.name} {c.section}</p>
           </Link>
         ))}
@@ -22,3 +22,4 @@ export default function FeesIndexPage() {
     </div>
   );
 }
+

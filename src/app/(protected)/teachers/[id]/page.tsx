@@ -14,7 +14,7 @@ export default function TeacherShowPage() {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">{t.name}</h2>
-        <Link href={`/teachers/${id}/edit`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Edit</Link>
+        <Link href={`/teachers/${id}/edit`} className="btn btn-secondary">Edit</Link>
       </div>
       <div className="card p-5 grid sm:grid-cols-2 gap-3 text-sm">
         <div><span className="text-brand-500">Code:</span> {t.employee_code}</div>
@@ -33,4 +33,5 @@ export default function TeacherShowPage() {
     </div>
   );
 }
+
 

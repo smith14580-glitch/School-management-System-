@@ -43,7 +43,7 @@ export default function ExamShowPage() {
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">{data.exam.name}</h2>
         <div className="flex gap-2">
-          <Link href={`/results/exam/${id}`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Results Roster</Link>
+          <Link href={`/results/exam/${id}`} className="btn btn-secondary">Results Roster</Link>
         </div>
       </div>
       <div className="mb-4 flex gap-2">
@@ -71,11 +71,12 @@ export default function ExamShowPage() {
         </table>
       </div>
       <div className="flex gap-2">
-        <button onClick={() => setStatus("ongoing")} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Mark Ongoing</button>
-        <button onClick={() => setStatus("completed")} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Mark Completed</button>
+        <button onClick={() => setStatus("ongoing")} className="btn btn-secondary">Mark Ongoing</button>
+        <button onClick={() => setStatus("completed")} className="btn btn-secondary">Mark Completed</button>
       </div>
     </div>
   );
 }
+
 
 

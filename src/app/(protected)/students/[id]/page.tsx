@@ -15,8 +15,8 @@ export default function StudentShowPage() {
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">{student.name}</h2>
         <div className="flex gap-2">
-          <Link href={`/students/${id}/edit`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">Edit</Link>
-          <Link href={`/students/${id}/id-card`} className="rounded-lg border border-cream-400 px-3 py-2 text-sm">ID Card</Link>
+          <Link href={`/students/${id}/edit`} className="btn btn-secondary">Edit</Link>
+          <Link href={`/students/${id}/id-card`} className="btn btn-secondary">ID Card</Link>
         </div>
       </div>
       <div className="card p-5 grid sm:grid-cols-2 gap-3 text-sm">
@@ -40,4 +40,5 @@ export default function StudentShowPage() {
     </div>
   );
 }
+
 
