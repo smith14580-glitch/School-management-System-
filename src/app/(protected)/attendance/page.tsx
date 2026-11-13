@@ -45,14 +45,14 @@ export default function AttendancePage() {
       {loading ? <p>Loading...</p> : (
         <div className="table-wrap">
           <table className="w-full text-sm">
-            <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2">Status</th></tr></thead>
+            <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2">Status</th></tr></thead>
             <tbody>
               {students.map((s) => (
-                <tr key={s.student_id} className="border-t border-cream-200">
+                <tr key={s.student_id} className="border-t border-slate-100">
                   <td className="px-4 py-2">{s.roll_number}</td>
                   <td className="px-4 py-2">{s.name}</td>
                   <td className="px-4 py-2 text-center">
-                    <select value={marks[s.student_id] || "present"} onChange={(e) => setMarks({ ...marks, [s.student_id]: e.target.value })} className="rounded-lg border border-cream-400 px-2 py-1 text-sm bg-white">
+                    <select value={marks[s.student_id] || "present"} onChange={(e) => setMarks({ ...marks, [s.student_id]: e.target.value })} className="rounded-lg border border-slate-300 px-2 py-1 text-sm bg-white">
                       <option value="present">Present</option>
                       <option value="absent">Absent</option>
                       <option value="leave">Leave</option>
@@ -69,5 +69,6 @@ export default function AttendancePage() {
     </div>
   );
 }
+
 
 

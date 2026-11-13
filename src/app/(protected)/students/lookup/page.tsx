@@ -19,21 +19,22 @@ export default function LookupPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Code</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Code</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {results.map((s) => (
-              <tr key={s.id} className="border-t border-cream-200">
+              <tr key={s.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{s.student_code}</td>
                 <td className="px-4 py-2">{s.name}</td>
-                <td className="px-4 py-2 text-right"><Link href={`/students/${s.id}`} className="text-brand-600 hover:underline">Open</Link></td>
+                <td className="px-4 py-2 text-right"><Link href={`/students/${s.id}`} className="text-navy-600 hover:underline">Open</Link></td>
               </tr>
             ))}
-            {results.length === 0 && <tr><td colSpan={3} className="px-4 py-6 text-center text-brand-500">No results</td></tr>}
+            {results.length === 0 && <tr><td colSpan={3} className="px-4 py-6 text-center text-slate-500">No results</td></tr>}
           </tbody>
         </table>
       </div>
     </div>
   );
 }
+
 
 

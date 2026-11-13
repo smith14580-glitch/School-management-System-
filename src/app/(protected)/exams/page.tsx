@@ -23,23 +23,24 @@ export default function ExamsPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Term</th><th className="text-left px-4 py-2">Dates</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Term</th><th className="text-left px-4 py-2">Dates</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {exams.map((e) => (
-              <tr key={e.id} className="border-t border-cream-200">
+              <tr key={e.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{e.name}</td>
                 <td className="px-4 py-2">{e.term || "-"}</td>
                 <td className="px-4 py-2">{e.start_date} to {e.end_date}</td>
                 <td className="px-4 py-2">{e.status}</td>
-                <td className="px-4 py-2 text-right"><Link href={`/exams/${e.id}`} className="text-brand-600 hover:underline">Open</Link></td>
+                <td className="px-4 py-2 text-right"><Link href={`/exams/${e.id}`} className="text-navy-600 hover:underline">Open</Link></td>
               </tr>
             ))}
-            {exams.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-brand-500">No exams</td></tr>}
+            {exams.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-slate-500">No exams</td></tr>}
           </tbody>
         </table>
       </div>
     </div>
   );
 }
+
 
 

@@ -24,15 +24,15 @@ export default function FeeTypesPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Amount</th><th className="text-left px-4 py-2">Recurring</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Amount</th><th className="text-left px-4 py-2">Recurring</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {types.map((t) => (
-              <tr key={t.id} className="border-t border-cream-200">
+              <tr key={t.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{t.name}</td>
                 <td className="px-4 py-2">{t.default_amount}</td>
                 <td className="px-4 py-2">{t.is_recurring_monthly ? "Yes" : "No"}</td>
                 <td className="px-4 py-2 text-right flex gap-2 justify-end">
-                  <button onClick={() => toggle(t.id)} className="text-xs text-brand-600 hover:underline">{t.is_active ? "Deactivate" : "Activate"}</button>
+                  <button onClick={() => toggle(t.id)} className="text-xs text-navy-600 hover:underline">{t.is_active ? "Deactivate" : "Activate"}</button>
                   <button onClick={() => del(t.id)} className="text-xs text-rose-600 hover:underline">Delete</button>
                 </td>
               </tr>
@@ -43,5 +43,6 @@ export default function FeeTypesPage() {
     </div>
   );
 }
+
 
 

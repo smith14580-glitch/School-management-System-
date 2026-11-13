@@ -13,18 +13,19 @@ export default function IdCardPage() {
   return (
     <div className="max-w-sm mx-auto">
       <div className="card p-5 text-center">
-        <h3 className="font-bold text-brand-800">{data.school_name}</h3>
-        <p className="text-xs text-brand-500 mb-3">Student ID Card</p>
-        <div className="w-24 h-24 mx-auto rounded-full bg-cream-200 grid place-items-center text-brand-600 mb-3">Photo</div>
+        <h3 className="font-bold text-navy-800">{data.school_name}</h3>
+        <p className="text-xs text-slate-500 mb-3">Student ID Card</p>
+        <div className="w-24 h-24 mx-auto rounded-full bg-navy-50 grid place-items-center text-navy-600 mb-3">Photo</div>
         <p className="font-semibold">{s.name}</p>
-        <p className="text-sm text-brand-600">ID: {s.student_code}</p>
-        <p className="text-sm text-brand-600">Roll: {s.roll_number}</p>
-        <p className="text-sm text-brand-600">Class: {data.class?.name} {data.class?.section}</p>
-        <p className="text-sm text-brand-600">Session: {data.session}</p>
+        <p className="text-sm text-navy-600">ID: {s.student_code}</p>
+        <p className="text-sm text-navy-600">Roll: {s.roll_number}</p>
+        <p className="text-sm text-navy-600">Class: {data.class?.name} {data.class?.section}</p>
+        <p className="text-sm text-navy-600">Session: {data.session}</p>
       </div>
       <button onClick={() => window.print()} className="mt-4 w-full btn btn-primary">Print</button>
     </div>
   );
 }
+
 
 

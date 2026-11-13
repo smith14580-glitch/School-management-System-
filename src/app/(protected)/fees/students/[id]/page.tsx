@@ -38,17 +38,17 @@ export default function StudentFeesPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Month</th><th className="text-left px-4 py-2">Fee Type</th><th className="text-left px-4 py-2">Due</th><th className="text-left px-4 py-2">Paid</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Month</th><th className="text-left px-4 py-2">Fee Type</th><th className="text-left px-4 py-2">Due</th><th className="text-left px-4 py-2">Paid</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {(data.records || []).map((r: any) => (
-              <tr key={r.id} className="border-t border-cream-200">
+              <tr key={r.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{r.month}/{r.year}</td>
                 <td className="px-4 py-2">{r.fee_type_name}</td>
                 <td className="px-4 py-2">{r.amount_due}</td>
                 <td className="px-4 py-2">{r.amount_paid}</td>
                 <td className="px-4 py-2">{r.status}</td>
                 <td className="px-4 py-2 text-right">
-                  {r.status !== "paid" && <button onClick={() => pay(r.id)} className="text-xs text-brand-600 hover:underline">Pay</button>}
+                  {r.status !== "paid" && <button onClick={() => pay(r.id)} className="text-xs text-navy-600 hover:underline">Pay</button>}
                 </td>
               </tr>
             ))}
@@ -58,4 +58,5 @@ export default function StudentFeesPage() {
     </div>
   );
 }
+
 

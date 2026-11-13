@@ -21,17 +21,17 @@ export default function SessionsPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Label</th><th className="text-left px-4 py-2">Dates</th><th className="text-left px-4 py-2">Current</th><th className="text-left px-4 py-2">Locked</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Label</th><th className="text-left px-4 py-2">Dates</th><th className="text-left px-4 py-2">Current</th><th className="text-left px-4 py-2">Locked</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {sessions.map((s) => (
-              <tr key={s.id} className="border-t border-cream-200">
+              <tr key={s.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{s.year_label}</td>
                 <td className="px-4 py-2">{s.start_date} to {s.end_date}</td>
                 <td className="px-4 py-2">{s.is_current ? "Yes" : "No"}</td>
                 <td className="px-4 py-2">{s.is_locked ? "Yes" : "No"}</td>
                 <td className="px-4 py-2 text-right flex gap-2 justify-end">
-                  {!s.is_current && <button onClick={() => makeCurrent(s.id)} className="text-xs text-brand-600 hover:underline">Make Current</button>}
-                  <button onClick={() => toggleLock(s.id)} className="text-xs text-brand-600 hover:underline">{s.is_locked ? "Unlock" : "Lock"}</button>
+                  {!s.is_current && <button onClick={() => makeCurrent(s.id)} className="text-xs text-navy-600 hover:underline">Make Current</button>}
+                  <button onClick={() => toggleLock(s.id)} className="text-xs text-navy-600 hover:underline">{s.is_locked ? "Unlock" : "Lock"}</button>
                 </td>
               </tr>
             ))}
@@ -41,5 +41,6 @@ export default function SessionsPage() {
     </div>
   );
 }
+
 
 

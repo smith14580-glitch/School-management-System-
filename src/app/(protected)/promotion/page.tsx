@@ -35,10 +35,10 @@ export default function PromotionPage() {
       {students.length > 0 && (
         <div className="table-wrap">
           <table className="w-full text-sm">
-            <thead className="bg-cream-200"><tr><th className="px-4 py-2"></th><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Roll</th></tr></thead>
+            <thead className="bg-navy-50"><tr><th className="px-4 py-2"></th><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Roll</th></tr></thead>
             <tbody>
               {students.map((s) => (
-                <tr key={s.student_id} className="border-t border-cream-200">
+                <tr key={s.student_id} className="border-t border-slate-100">
                   <td className="px-4 py-2"><input type="checkbox" checked={selected.includes(s.student_id)} onChange={(e) => setSelected(e.target.checked ? [...selected, s.student_id] : selected.filter((x) => x !== s.student_id))} /></td>
                   <td className="px-4 py-2">{s.name}</td>
                   <td className="px-4 py-2">{s.roll_number}</td>
@@ -52,5 +52,6 @@ export default function PromotionPage() {
     </div>
   );
 }
+
 
 

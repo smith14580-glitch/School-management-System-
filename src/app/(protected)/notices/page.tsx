@@ -20,14 +20,14 @@ export default function NoticesPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Audience</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Audience</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {notices.map((n) => (
-              <tr key={n.id} className="border-t border-cream-200">
+              <tr key={n.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{n.title}</td>
                 <td className="px-4 py-2">{n.audience}</td>
                 <td className="px-4 py-2 text-right flex gap-2 justify-end">
-                  <button onClick={() => toggle(n.id)} className="text-xs text-brand-600 hover:underline">{n.is_active ? "Deactivate" : "Activate"}</button>
+                  <button onClick={() => toggle(n.id)} className="text-xs text-navy-600 hover:underline">{n.is_active ? "Deactivate" : "Activate"}</button>
                   <button onClick={() => del(n.id)} className="text-xs text-rose-600 hover:underline">Delete</button>
                 </td>
               </tr>
@@ -38,5 +38,6 @@ export default function NoticesPage() {
     </div>
   );
 }
+
 
 

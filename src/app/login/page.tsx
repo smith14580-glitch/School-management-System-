@@ -25,32 +25,48 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen grid place-items-center bg-cream-100 p-4">
-      <div className="w-full max-w-md rounded-xl bg-cream-50 border border-cream-300 p-8 shadow-card">
-        <div className="text-center mb-6">
-          <div className="w-12 h-12 rounded-full bg-brand-700 text-cream-50 grid place-items-center text-xl font-bold mb-3">
-            S
+    <div className="min-h-screen grid lg:grid-cols-2">
+      {/* Left: navy + gold branding */}
+      <div className="hidden lg:flex flex-col justify-between p-10 bg-gradient-to-br from-navy-800 to-navy-950 text-white relative">
+        <div className="absolute inset-x-0 top-0 h-1 bg-gold-500" />
+        <div className="flex items-center gap-3">
+          <span className="grid place-items-center w-12 h-12 rounded-xl bg-gold-500 text-navy-900 font-bold text-2xl shadow">S</span>
+          <span className="font-semibold text-lg">School Management System</span>
+        </div>
+        <div className="max-w-md">
+          <h1 className="text-4xl font-bold leading-tight">School Management System</h1>
+          <p className="mt-3 text-slate-300 text-sm">Manage students, teachers, fees, attendance, exams and results — all in one place.</p>
+        </div>
+        <p className="text-xs text-slate-400">© School Management System</p>
+      </div>
+
+      {/* Right: login form */}
+      <div className="grid place-items-center bg-page p-6">
+        <div className="w-full max-w-md card p-8">
+          <div className="text-center mb-6">
+            <div className="mx-auto w-12 h-12 rounded-full bg-navy-700 text-white grid place-items-center text-xl font-bold mb-3">S</div>
+            <h1 className="text-xl font-semibold text-slate-800">Sign in</h1>
+            <p className="text-sm text-slate-500 mt-1">School Management System</p>
           </div>
-          <h1 className="text-xl font-semibold mb-1">Sign in</h1>
-          <p className="text-sm text-brand-500 mt-1">School Management System</p>
-          {error && <div className="mb-4 text-sm text-rose-600 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2">{error}</div>}
+          {error && <div className="mb-4 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</div>}
           <form onSubmit={submit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-1.5">Username</label>
+              <label className="label">Username</label>
               <input value={username} onChange={(e) => setUsername(e.target.value)} required autoFocus
-                className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm"
-              />
+                className="input" />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1.5">Password</label>
+              <label className="label">Password</label>
               <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required
-                autoComplete="current-password" className="w-full rounded-lg border border-cream-400 px-3.5 py-2.5 bg-white text-sm"
-              />
+                autoComplete="current-password" className="input" />
             </div>
             <button disabled={loading} className="btn btn-primary w-full">
               {loading ? "Signing in..." : "Sign in"}
             </button>
           </form>
+          <p className="mt-6 text-xs text-slate-500 text-center">
+            Forgotten your password? Ask an administrator to reset it.
+          </p>
         </div>
       </div>
     </div>

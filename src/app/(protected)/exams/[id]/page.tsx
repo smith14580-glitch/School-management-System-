@@ -51,16 +51,16 @@ export default function ExamShowPage() {
           <option value="">Add subject</option>
           {classSubjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
         </select>
-        <input type="number" value={totalMarks} onChange={(e) => setTotalMarks(Number(e.target.value))} className="w-24 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Total" />
-        <input type="number" value={passingMarks} onChange={(e) => setPassingMarks(Number(e.target.value))} className="w-24 rounded-lg border border-cream-400 px-2 py-2 text-sm bg-white" placeholder="Pass" />
+        <input type="number" value={totalMarks} onChange={(e) => setTotalMarks(Number(e.target.value))} className="w-24 rounded-lg border border-slate-300 px-2 py-2 text-sm bg-white" placeholder="Total" />
+        <input type="number" value={passingMarks} onChange={(e) => setPassingMarks(Number(e.target.value))} className="w-24 rounded-lg border border-slate-300 px-2 py-2 text-sm bg-white" placeholder="Pass" />
         <button onClick={addSubject} className="btn btn-primary">Add</button>
       </div>
       <div className="table-wrap mb-4">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Subject</th><th className="text-left px-4 py-2">Total</th><th className="text-left px-4 py-2">Pass</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Subject</th><th className="text-left px-4 py-2">Total</th><th className="text-left px-4 py-2">Pass</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {data.subjects.map((s: any) => (
-              <tr key={s.id} className="border-t border-cream-200">
+              <tr key={s.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{s.subject_name}</td>
                 <td className="px-4 py-2">{s.total_marks}</td>
                 <td className="px-4 py-2">{s.passing_marks}</td>
@@ -77,6 +77,7 @@ export default function ExamShowPage() {
     </div>
   );
 }
+
 
 
 

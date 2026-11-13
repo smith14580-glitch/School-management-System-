@@ -46,17 +46,17 @@ export default function ResultEntryPage() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-2">Result Entry</h2>
-      <p className="text-sm text-brand-500 mb-4">{data.exam.name}</p>
+      <p className="text-sm text-slate-500 mb-4">{data.exam.name}</p>
       <div className="card p-5 mb-4">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Subject</th><th className="text-left px-4 py-2">Total</th><th className="px-4 py-2">Marks</th><th className="px-4 py-2">Absent</th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Subject</th><th className="text-left px-4 py-2">Total</th><th className="px-4 py-2">Marks</th><th className="px-4 py-2">Absent</th></tr></thead>
           <tbody>
             {data.subjects.map((s: any) => (
-              <tr key={s.subject_id} className="border-t border-cream-200">
+              <tr key={s.subject_id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{s.subject_name}</td>
                 <td className="px-4 py-2">{s.total_marks}</td>
                 <td className="px-4 py-2 text-center">
-                  <input value={marks[s.subject_id] ?? ""} onChange={(e) => setMarks({ ...marks, [s.subject_id]: e.target.value })} className="w-20 rounded-lg border border-cream-400 px-2 py-1 text-sm bg-white" />
+                  <input value={marks[s.subject_id] ?? ""} onChange={(e) => setMarks({ ...marks, [s.subject_id]: e.target.value })} className="w-20 rounded-lg border border-slate-300 px-2 py-1 text-sm bg-white" />
                 </td>
                 <td className="px-4 py-2 text-center">
                   <input type="checkbox" checked={absent[s.subject_id] || false} onChange={(e) => setAbsent({ ...absent, [s.subject_id]: e.target.checked })} />
@@ -77,11 +77,12 @@ export default function ResultEntryPage() {
         )}
         <div className="mt-4 flex gap-2">
           <button onClick={() => save(false)} className="btn btn-primary">Save</button>
-          <button onClick={() => save(true)} className="rounded-lg border border-cream-400 px-4 py-2 text-sm">Finalize</button>
+          <button onClick={() => save(true)} className="rounded-lg border border-slate-300 px-4 py-2 text-sm">Finalize</button>
         </div>
       </div>
     </div>
   );
 }
+
 
 

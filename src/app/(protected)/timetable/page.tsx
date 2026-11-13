@@ -36,17 +36,17 @@ export default function TimetablePage() {
           </div>
           <div className="table-wrap">
             <table className="w-full text-sm">
-              <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Day</th><th className="text-left px-4 py-2">Time</th><th className="text-left px-4 py-2">Room</th><th className="px-4 py-2"></th></tr></thead>
+              <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Day</th><th className="text-left px-4 py-2">Time</th><th className="text-left px-4 py-2">Room</th><th className="px-4 py-2"></th></tr></thead>
               <tbody>
                 {slots.map((s) => (
-                  <tr key={s.id} className="border-t border-cream-200">
+                  <tr key={s.id} className="border-t border-slate-100">
                     <td className="px-4 py-2">{s.day_of_week}</td>
                     <td className="px-4 py-2">{s.start_time} - {s.end_time}</td>
                     <td className="px-4 py-2">{s.room || "-"}</td>
                     <td className="px-4 py-2 text-right"><button onClick={() => del(s.id)} className="text-xs text-rose-600 hover:underline">Delete</button></td>
                   </tr>
                 ))}
-                {slots.length === 0 && <tr><td colSpan={4} className="px-4 py-6 text-center text-brand-500">No slots</td></tr>}
+                {slots.length === 0 && <tr><td colSpan={4} className="px-4 py-6 text-center text-slate-500">No slots</td></tr>}
               </tbody>
             </table>
           </div>
@@ -55,5 +55,6 @@ export default function TimetablePage() {
     </div>
   );
 }
+
 
 

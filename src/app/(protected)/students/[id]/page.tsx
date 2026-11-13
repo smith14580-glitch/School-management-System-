@@ -20,25 +20,26 @@ export default function StudentShowPage() {
         </div>
       </div>
       <div className="card p-5 grid sm:grid-cols-2 gap-3 text-sm">
-        <div><span className="text-brand-500">Student Code:</span> {student.student_code}</div>
-        <div><span className="text-brand-500">Roll:</span> {student.roll_number ?? "-"}</div>
-        <div><span className="text-brand-500">Guardian:</span> {student.father_guardian_name}</div>
-        <div><span className="text-brand-500">DOB:</span> {student.dob || "-"}</div>
-        <div><span className="text-brand-500">Gender:</span> {student.gender || "-"}</div>
-        <div><span className="text-brand-500">Contact:</span> {student.contact || "-"}</div>
-        <div><span className="text-brand-500">WhatsApp:</span> {student.whatsapp_number || "-"}</div>
-        <div><span className="text-brand-500">Address:</span> {student.address || "-"}</div>
-        <div><span className="text-brand-500">Previous School:</span> {student.previous_school || "-"}</div>
-        <div><span className="text-brand-500">Status:</span> {student.status}</div>
+        <div><span className="text-slate-500">Student Code:</span> {student.student_code}</div>
+        <div><span className="text-slate-500">Roll:</span> {student.roll_number ?? "-"}</div>
+        <div><span className="text-slate-500">Guardian:</span> {student.father_guardian_name}</div>
+        <div><span className="text-slate-500">DOB:</span> {student.dob || "-"}</div>
+        <div><span className="text-slate-500">Gender:</span> {student.gender || "-"}</div>
+        <div><span className="text-slate-500">Contact:</span> {student.contact || "-"}</div>
+        <div><span className="text-slate-500">WhatsApp:</span> {student.whatsapp_number || "-"}</div>
+        <div><span className="text-slate-500">Address:</span> {student.address || "-"}</div>
+        <div><span className="text-slate-500">Previous School:</span> {student.previous_school || "-"}</div>
+        <div><span className="text-slate-500">Status:</span> {student.status}</div>
       </div>
       <div className="mt-4 flex gap-2">
-        <Link href={`/fees/students/${id}`} className="text-sm text-brand-600 hover:underline">Fees</Link>
-        <Link href={`/attendance/students/${id}`} className="text-sm text-brand-600 hover:underline">Attendance</Link>
-        <Link href={`/reports/students/${id}/weekly`} className="text-sm text-brand-600 hover:underline">Weekly Report</Link>
-        <Link href={`/reports/students/${id}/monthly`} className="text-sm text-brand-600 hover:underline">Monthly Report</Link>
+        <Link href={`/fees/students/${id}`} className="text-sm text-navy-600 hover:underline">Fees</Link>
+        <Link href={`/attendance/students/${id}`} className="text-sm text-navy-600 hover:underline">Attendance</Link>
+        <Link href={`/reports/students/${id}/weekly`} className="text-sm text-navy-600 hover:underline">Weekly Report</Link>
+        <Link href={`/reports/students/${id}/monthly`} className="text-sm text-navy-600 hover:underline">Monthly Report</Link>
       </div>
     </div>
   );
 }
+
 
 

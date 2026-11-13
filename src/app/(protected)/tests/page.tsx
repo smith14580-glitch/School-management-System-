@@ -23,22 +23,23 @@ export default function TestsPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Date</th><th className="text-left px-4 py-2">Total</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Date</th><th className="text-left px-4 py-2">Total</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {tests.map((t) => (
-              <tr key={t.id} className="border-t border-cream-200">
+              <tr key={t.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{t.title}</td>
                 <td className="px-4 py-2">{t.test_date}</td>
                 <td className="px-4 py-2">{t.total_marks}</td>
-                <td className="px-4 py-2 text-right"><Link href={`/tests/${t.id}`} className="text-brand-600 hover:underline">Open</Link></td>
+                <td className="px-4 py-2 text-right"><Link href={`/tests/${t.id}`} className="text-navy-600 hover:underline">Open</Link></td>
               </tr>
             ))}
-            {tests.length === 0 && <tr><td colSpan={4} className="px-4 py-6 text-center text-brand-500">No tests</td></tr>}
+            {tests.length === 0 && <tr><td colSpan={4} className="px-4 py-6 text-center text-slate-500">No tests</td></tr>}
           </tbody>
         </table>
       </div>
     </div>
   );
 }
+
 
 

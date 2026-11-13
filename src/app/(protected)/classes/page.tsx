@@ -27,21 +27,21 @@ export default function ClassesPage() {
       {loading ? <p>Loading...</p> : (
         <div className="table-wrap">
           <table className="w-full text-sm">
-            <thead className="bg-cream-200"><tr>
+            <thead className="bg-navy-50"><tr>
               <th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Section</th>
               <th className="text-left px-4 py-2">Subjects</th><th className="text-left px-4 py-2">Students</th><th className="px-4 py-2"></th>
             </tr></thead>
             <tbody>
               {classes.map((c) => (
-                <tr key={c.id} className="border-t border-cream-200">
+                <tr key={c.id} className="border-t border-slate-100">
                   <td className="px-4 py-2">{c.name}</td>
                   <td className="px-4 py-2">{c.section || "-"}</td>
                   <td className="px-4 py-2">{c.subject_count}</td>
                   <td className="px-4 py-2">{c.student_count}</td>
-                  <td className="px-4 py-2 text-right"><Link href={`/classes/${c.id}`} className="text-brand-600 hover:underline">Open</Link></td>
+                  <td className="px-4 py-2 text-right"><Link href={`/classes/${c.id}`} className="text-navy-600 hover:underline">Open</Link></td>
                 </tr>
               ))}
-              {classes.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-brand-500">No classes</td></tr>}
+              {classes.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-slate-500">No classes</td></tr>}
             </tbody>
           </table>
         </div>
@@ -49,6 +49,7 @@ export default function ClassesPage() {
     </div>
   );
 }
+
 
 
 

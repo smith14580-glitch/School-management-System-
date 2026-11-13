@@ -11,13 +11,14 @@ export default function IdCardsClassesPage() {
       <h2 className="text-xl font-semibold mb-4">ID Cards - By Class</h2>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {classes.map((c) => (
-          <Link key={c.id} href={`/id-cards/classes/${c.id}`} className="card p-4 shadow-card hover:border-brand-300">
+          <Link key={c.id} href={`/id-cards/classes/${c.id}`} className="card p-4 shadow-card hover:border-slate-300">
             <p className="font-semibold">{c.name} {c.section}</p>
-            <p className="text-sm text-brand-500">{c.student_count} students</p>
+            <p className="text-sm text-slate-500">{c.student_count} students</p>
           </Link>
         ))}
       </div>
     </div>
   );
 }
+
 

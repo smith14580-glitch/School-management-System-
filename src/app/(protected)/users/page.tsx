@@ -26,15 +26,15 @@ export default function UsersPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Username</th><th className="text-left px-4 py-2">Role</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Name</th><th className="text-left px-4 py-2">Username</th><th className="text-left px-4 py-2">Role</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {users.map((u) => (
-              <tr key={u.id} className="border-t border-cream-200">
+              <tr key={u.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{u.name}</td>
                 <td className="px-4 py-2">{u.username}</td>
                 <td className="px-4 py-2">{u.role_name}</td>
                 <td className="px-4 py-2">{u.status}</td>
-                <td className="px-4 py-2 text-right"><button onClick={() => toggle(u.id)} className="text-xs text-brand-600 hover:underline">{u.status === "active" ? "Deactivate" : "Activate"}</button></td>
+                <td className="px-4 py-2 text-right"><button onClick={() => toggle(u.id)} className="text-xs text-navy-600 hover:underline">{u.status === "active" ? "Deactivate" : "Activate"}</button></td>
               </tr>
             ))}
           </tbody>
@@ -43,5 +43,6 @@ export default function UsersPage() {
     </div>
   );
 }
+
 
 

@@ -28,10 +28,10 @@ export default function CalendarPage() {
       </div>
       <div className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Type</th><th className="text-left px-4 py-2">Dates</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Title</th><th className="text-left px-4 py-2">Type</th><th className="text-left px-4 py-2">Dates</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {events.map((e) => (
-              <tr key={e.id} className="border-t border-cream-200">
+              <tr key={e.id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{e.title}</td>
                 <td className="px-4 py-2">{e.event_type}</td>
                 <td className="px-4 py-2">{e.start_date} to {e.end_date}</td>
@@ -44,5 +44,6 @@ export default function CalendarPage() {
     </div>
   );
 }
+
 
 

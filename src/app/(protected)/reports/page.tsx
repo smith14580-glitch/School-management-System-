@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 
 export default function ReportsIndexPage() {
-  return <div><h2 className="text-xl font-semibold mb-4">Reports</h2><p className="text-sm text-brand-500">Open a student to view weekly/monthly reports.</p></div>;
+  return <div><h2 className="text-xl font-semibold mb-4">Reports</h2><p className="text-sm text-slate-500">Open a student to view weekly/monthly reports.</p></div>;
 }
 
 export function WeeklyReport() {
@@ -44,4 +44,5 @@ export function MonthlyReport() {
     </div>
   );
 }
+
 

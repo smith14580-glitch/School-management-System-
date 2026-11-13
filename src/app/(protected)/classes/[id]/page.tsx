@@ -55,41 +55,41 @@ export default function ClassShowPage() {
           <input value={newSubjectCode} onChange={(e) => setNewSubjectCode(e.target.value)} placeholder="Code" className="input w-24" />
           <button onClick={addSubject} className="btn btn-primary">Add</button>
         </div>
-        <ul className="divide-y divide-cream-200">
+        <ul className="divide-y divide-slate-100">
           {data.subjects.map((s: any) => (
             <li key={s.id} className="py-2 flex items-center justify-between">
               <span>{s.name} {s.code ? `(${s.code})` : ""} {!s.is_active && <span className="text-xs text-rose-600">inactive</span>}</span>
               <div className="flex gap-2">
-                <button onClick={() => toggleSubject(s.id)} className="text-xs text-brand-600 hover:underline">{s.is_active ? "Deactivate" : "Activate"}</button>
+                <button onClick={() => toggleSubject(s.id)} className="text-xs text-navy-600 hover:underline">{s.is_active ? "Deactivate" : "Activate"}</button>
                 <button onClick={() => deleteSubject(s.id)} className="text-xs text-rose-600 hover:underline">Delete</button>
               </div>
             </li>
           ))}
-          {data.subjects.length === 0 && <li className="py-2 text-brand-500 text-sm">No subjects</li>}
+          {data.subjects.length === 0 && <li className="py-2 text-slate-500 text-sm">No subjects</li>}
         </ul>
       </section>
 
       <section className="card p-5">
         <h3 className="font-semibold mb-3">Students ({students.length})</h3>
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr>
+          <thead className="bg-navy-50"><tr>
             <th className="text-left px-3 py-2">Roll</th><th className="text-left px-3 py-2">Name</th>
             <th className="text-left px-3 py-2">Guardian</th><th className="text-left px-3 py-2">Status</th><th className="px-3 py-2"></th>
           </tr></thead>
           <tbody>
             {students.map((s) => (
-              <tr key={s.enrollment_id} className="border-t border-cream-200">
+              <tr key={s.enrollment_id} className="border-t border-slate-100">
                 <td className="px-3 py-2">{s.roll_number}</td>
-                <td className="px-3 py-2"><Link href={`/students/${s.student_id}`} className="text-brand-600 hover:underline">{s.name}</Link></td>
+                <td className="px-3 py-2"><Link href={`/students/${s.student_id}`} className="text-navy-600 hover:underline">{s.name}</Link></td>
                 <td className="px-3 py-2">{s.father_guardian_name}</td>
                 <td className="px-3 py-2">{s.status}</td>
                 <td className="px-3 py-2 text-right flex gap-2 justify-end">
-                  <Link href={`/classes/${id}/students/${s.enrollment_id}/transfer`} className="text-xs text-brand-600 hover:underline">Transfer</Link>
+                  <Link href={`/classes/${id}/students/${s.enrollment_id}/transfer`} className="text-xs text-navy-600 hover:underline">Transfer</Link>
                   <button onClick={async () => { if (confirm("Remove student from class?")) { await api(`/api/class-students/${s.enrollment_id}/remove`, { method: "POST" }); load(); } }} className="text-xs text-rose-600 hover:underline">Remove</button>
                 </td>
               </tr>
             ))}
-            {students.length === 0 && <tr><td colSpan={5} className="px-3 py-6 text-center text-brand-500">No students</td></tr>}
+            {students.length === 0 && <tr><td colSpan={5} className="px-3 py-6 text-center text-slate-500">No students</td></tr>}
           </tbody>
         </table>
         <div className="mt-3">
@@ -98,12 +98,13 @@ export default function ClassShowPage() {
             const blob = new Blob([JSON.stringify(r.rows, null, 2)], { type: "application/json" });
             const url = URL.createObjectURL(blob);
             const a = document.createElement("a"); a.href = url; a.download = "roster.json"; a.click();
-          }} className="text-sm text-brand-600 hover:underline">Download roster</button>
+          }} className="text-sm text-navy-600 hover:underline">Download roster</button>
         </div>
       </section>
     </div>
   );
 }
+
 
 
 

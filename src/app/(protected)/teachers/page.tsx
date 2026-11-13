@@ -27,21 +27,21 @@ export default function TeachersPage() {
       {loading ? <p>Loading...</p> : (
         <div className="table-wrap">
           <table className="w-full text-sm">
-            <thead className="bg-cream-200"><tr>
+            <thead className="bg-navy-50"><tr>
               <th className="text-left px-4 py-2">Code</th><th className="text-left px-4 py-2">Name</th>
               <th className="text-left px-4 py-2">Contact</th><th className="text-left px-4 py-2">Status</th><th className="px-4 py-2"></th>
             </tr></thead>
             <tbody>
               {teachers.map((t) => (
-                <tr key={t.id} className="border-t border-cream-200">
+                <tr key={t.id} className="border-t border-slate-100">
                   <td className="px-4 py-2">{t.employee_code}</td>
-                  <td className="px-4 py-2"><Link href={`/teachers/${t.id}`} className="text-brand-600 hover:underline">{t.name}</Link></td>
+                  <td className="px-4 py-2"><Link href={`/teachers/${t.id}`} className="text-navy-600 hover:underline">{t.name}</Link></td>
                   <td className="px-4 py-2">{t.contact || "-"}</td>
                   <td className="px-4 py-2">{t.status}</td>
-                  <td className="px-4 py-2 text-right"><Link href={`/teachers/${t.id}/edit`} className="text-xs text-brand-600 hover:underline">Edit</Link></td>
+                  <td className="px-4 py-2 text-right"><Link href={`/teachers/${t.id}/edit`} className="text-xs text-navy-600 hover:underline">Edit</Link></td>
                 </tr>
               ))}
-              {teachers.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-brand-500">No teachers</td></tr>}
+              {teachers.length === 0 && <tr><td colSpan={5} className="px-4 py-6 text-center text-slate-500">No teachers</td></tr>}
             </tbody>
           </table>
         </div>
@@ -49,6 +49,7 @@ export default function TeachersPage() {
     </div>
   );
 }
+
 
 
 

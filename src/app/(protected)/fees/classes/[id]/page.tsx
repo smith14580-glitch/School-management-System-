@@ -56,14 +56,14 @@ export default function ClassFeesPage() {
       <section className="mb-6 card p-5">
         <h3 className="font-semibold mb-3">Fee Configuration</h3>
         <table className="w-full text-sm mb-3">
-          <thead className="bg-cream-200"><tr><th className="text-left px-3 py-2">Fee Type</th><th className="text-left px-3 py-2">Amount</th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-3 py-2">Fee Type</th><th className="text-left px-3 py-2">Amount</th></tr></thead>
           <tbody>
             {types.map((t) => {
               const existing = config.find((c) => c.fee_type_id === t.id);
               return (
-                <tr key={t.id} className="border-t border-cream-200">
+                <tr key={t.id} className="border-t border-slate-100">
                   <td className="px-3 py-2">{t.name}</td>
-                  <td className="px-3 py-2"><input id={`amt-${t.id}`} type="number" defaultValue={existing?.amount ?? 0} className="rounded-lg border border-cream-400 px-2 py-1 text-sm bg-white w-28" /></td>
+                  <td className="px-3 py-2"><input id={`amt-${t.id}`} type="number" defaultValue={existing?.amount ?? 0} className="rounded-lg border border-slate-300 px-2 py-1 text-sm bg-white w-28" /></td>
                 </tr>
               );
             })}
@@ -74,15 +74,15 @@ export default function ClassFeesPage() {
 
       <section className="table-wrap">
         <table className="w-full text-sm">
-          <thead className="bg-cream-200"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2"></th></tr></thead>
+          <thead className="bg-navy-50"><tr><th className="text-left px-4 py-2">Roll</th><th className="text-left px-4 py-2">Name</th><th className="px-4 py-2"></th></tr></thead>
           <tbody>
             {students.map((s) => (
-              <tr key={s.enrollment_id} className="border-t border-cream-200">
+              <tr key={s.enrollment_id} className="border-t border-slate-100">
                 <td className="px-4 py-2">{s.roll_number}</td>
                 <td className="px-4 py-2">{s.name}</td>
                 <td className="px-4 py-2 text-right flex gap-2 justify-end">
-                  <button onClick={() => generate(s.student_id)} className="text-xs text-brand-600 hover:underline">Generate</button>
-                  <Link href={`/fees/students/${s.student_id}`} className="text-xs text-brand-600 hover:underline">View</Link>
+                  <button onClick={() => generate(s.student_id)} className="text-xs text-navy-600 hover:underline">Generate</button>
+                  <Link href={`/fees/students/${s.student_id}`} className="text-xs text-navy-600 hover:underline">View</Link>
                 </td>
               </tr>
             ))}
@@ -92,5 +92,6 @@ export default function ClassFeesPage() {
     </div>
   );
 }
+
 
 

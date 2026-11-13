@@ -14,7 +14,7 @@ export default function FeesIndexPage() {
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {classes.map((c) => (
-          <Link key={c.id} href={`/fees/classes/${c.id}`} className="card p-4 shadow-card hover:border-brand-300">
+          <Link key={c.id} href={`/fees/classes/${c.id}`} className="card p-4 shadow-card hover:border-slate-300">
             <p className="font-semibold">{c.name} {c.section}</p>
           </Link>
         ))}
@@ -22,4 +22,5 @@ export default function FeesIndexPage() {
     </div>
   );
 }
+
 
